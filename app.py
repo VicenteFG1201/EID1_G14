@@ -35,11 +35,17 @@ def calcular_recorrido(expr_str):
     pass
 
 def encontrar_intersecciones(expr_str):
+    
     """
     Busca las intersecciones de la función con los ejes X e Y.
     (Integrante 3: Completar)
     """
-    pass
+    f = sp.sympify(expr_str)
+    interseccion_y = f.subs(x,0)
+
+    interseccion_x = sp.solve(f,x)
+
+    print("La intersección en el eje x es: ",", ".join(str((xi,0)) for xi in interseccion_x)," y la intersección en el eje y es: ",(0,interseccion_y),sep="")
 
 def evaluar_punto(expr_str, valor_x):
     """
