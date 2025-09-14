@@ -60,9 +60,15 @@ def evaluar_punto(expr_str, valor_x):
         print(f"   f(x) = {f}")
         paso = f.subs(x, valor_x)
         print(f"2. f({valor_x}) = {paso}")
+        
+        if paso.has(sp.zoo, sp.oo, sp.nan) or paso.is_real is False:
+            print("3. El punto está fuera del dominio (resultado no definido o no real).")
+            return None
+            
         resultado = float(paso)
         print(f"3. Resultado final: ({valor_x}, {resultado})")
         return (valor_x, resultado)
+    
     except Exception as e:
         print("No se pudo evaluar el punto:", e)
         return None
