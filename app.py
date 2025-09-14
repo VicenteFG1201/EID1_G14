@@ -2,7 +2,7 @@
 # Proyecto EID 
 # Integrante 1: Vicente Flores Guzman
 # Integrante 2: (Completar)
-# Integrante 3: (Completar)
+# Integrante 3: Lucas Nuñez Pinilla
 
 
 import sympy as sp
